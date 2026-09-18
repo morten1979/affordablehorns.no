@@ -41,11 +41,18 @@ const gallery = [
       <a class="brand-mark" href="/" aria-label="Affordable Horns home">
         <img src="/images/affordablehorns-logo-transparent.png" alt="Affordable Horns logo" />
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#section">The section</a>
-        <a href="#media">Listen / watch</a>
-        <a href="#arrangements">Arrangements</a>
-        <a href="#contact">Book us</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-menu" class="nav-menu">
+          <a href="#section">The section</a>
+          <a href="#media">Listen / watch</a>
+          <a href="#arrangements">Arrangements</a>
+          <a href="#contact">Book us</a>
+        </div>
       </nav>
     </header>
 
@@ -199,5 +206,25 @@ const gallery = [
       <span>© {new Date().getFullYear()} Affordable Horns</span>
       <a href="#top">Back to top ↑</a>
     </footer>
+
+    <script>
+      const siteNav = document.querySelector('.site-nav');
+      const navToggle = document.querySelector('.nav-toggle');
+
+      if (siteNav && navToggle) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = siteNav.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', (event) => {
+          const target = event.target;
+          if (target instanceof Node && !siteNav.contains(target)) {
+            siteNav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    </script>
   </body>
 </html>
