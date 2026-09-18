@@ -14,9 +14,13 @@ const regularWork = [
 ];
 
 const gallery = [
-  { src: '/images/morten-09.jpg', alt: 'Affordable Horns with Ronny Aagren Band', position: 'center bottom' },
-  { src: '/images/morten-06.jpg', alt: 'Affordable Horns with Karlstadpojkarna', position: 'center top' },
-  { src: '/images/morten-12.jpg', alt: 'Affordable Horns playing together', position: 'center 35%' }
+  { src: '/images/aff-00.jpg', alt: 'Affordable Horns live performance', position: 'center center' },
+  { src: '/images/aff-01.jpg', alt: 'Affordable Horns horn section close-up', position: 'center center' },
+  { src: '/images/aff-02.jpg', alt: 'Affordable Horns on stage', position: 'center center' },
+  { src: '/images/aff-03.jpg', alt: 'Affordable Horns performing live', position: 'center center' },
+  { src: '/images/aff-04.jpg', alt: 'Affordable Horns performance detail', position: 'center center' },
+  { src: '/images/aff-05.jpg', alt: 'Affordable Horns stage setup and brass detail', position: 'center center' },
+  { src: '/images/aff-06.jpg', alt: 'Affordable Horns live band performance', position: 'center center' }
 ];
 ---
 
@@ -28,13 +32,15 @@ const gallery = [
     <meta name="description" content="Affordable Horns is a versatile, high-impact horn section for live performances, recordings, and special events." />
     <meta property="og:title" content="Affordable Horns" />
     <meta property="og:description" content="A versatile, high-impact horn section for live performances, recordings, and special events." />
-    <meta property="og:image" content="/images/morten-06.jpg" />
+    <meta property="og:image" content="/images/aff-00.jpg" />
     <link rel="canonical" href="https://affordablehorns.no/" />
     <title>Affordable Horns · Live horn section</title>
   </head>
   <body>
     <header class="site-header">
-      <a class="wordmark" href="/" aria-label="Affordable Horns home">Affordable Horns</a>
+      <a class="brand-mark" href="/" aria-label="Affordable Horns home">
+        <img src="/images/affordablehorns-logo-transparent.png" alt="Affordable Horns logo" />
+      </a>
       <nav aria-label="Main navigation">
         <a href="#section">The section</a>
         <a href="#media">Listen / watch</a>
@@ -53,7 +59,7 @@ const gallery = [
         </div>
         <div class="hero-visual reveal" aria-label="Affordable Horns performing">
           <img src={gallery[0].src} alt={gallery[0].alt} style={`object-position: ${gallery[0].position}`} />
-          <span class="hero-stamp">Trumpet · sax · trombone</span>
+          <span class="hero-stamp">Morten · Anders · Dagfinn</span>
         </div>
       </section>
 
@@ -104,7 +110,7 @@ const gallery = [
                     allowfullscreen
                   ></iframe>
                 </div>
-                <p class="media-label">Oktoberfest teaser</p>
+                <p class="media-label">Karlstadpojkarna, Enebakkhallen 2024</p>
               </div>
               <div class="video-item">
                 <div class="video-frame video-frame-short">
@@ -116,7 +122,7 @@ const gallery = [
                     allowfullscreen
                   ></iframe>
                 </div>
-                <p class="media-label">Live performance · short</p>
+                <p class="media-label">Romerike Soulservice, Herr Nilsen 2025</p>
               </div>
               <div class="video-item">
                 <div class="video-frame video-frame-short">
@@ -128,19 +134,20 @@ const gallery = [
                     allowfullscreen
                   ></iframe>
                 </div>
-                <p class="media-label">Live performance · short</p>
+                <p class="media-label">Ronny Aagren Band, Connect 2024</p>
               </div>
             </div>
             <div class="soundcloud-card">
-              <p class="credit-label">SoundCloud clip</p>
+              <p class="credit-label">SoundCloud · Romerike Soulservice</p>
               <iframe
                 width="100%"
                 height="166"
                 allow="autoplay"
                 loading="lazy"
-                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/mortentormoen/late-in-the-evening&color=%23bd5b3e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/mortentormoen/late-in-the-evening&color=%23d8323b&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
                 title="Affordable Horns SoundCloud clip"
               ></iframe>
+              <p class="soundcloud-caption">Romerike Soulservice plays Paul Simon’s Late in the Evening live from Kulturpuben in Lillestrøm (around 100 people).</p>
             </div>
           </div>
         </div>
@@ -148,11 +155,12 @@ const gallery = [
 
       <section class="arrangements-cta" id="arrangements" aria-labelledby="arrangements-title">
         <div class="arrangements-inner">
-          <div>
-            <p class="eyebrow">Need the charts?</p>
-            <h2 id="arrangements-title">Grab the<br /><em>arrangements.</em></h2>
+          <div class="arrangements-visual">
+            <img src="/images/morten-18.jpg" alt="Morten Tørmoen arrangement sheet and horn charts" loading="lazy" />
           </div>
           <div class="arrangements-copy">
+            <p class="eyebrow">Need the charts?</p>
+            <h2 id="arrangements-title">Grab the<br /><em>arrangements.</em></h2>
             <p>Looking for music arranged for horns? Browse Morten's catalog of arrangements for horn sections, bands, and big bands on tormoen.no.</p>
             <a class="text-link" href="https://tormoen.no/#arrangements" target="_blank" rel="noreferrer">Browse arrangements <span aria-hidden="true">↗</span></a>
           </div>
@@ -161,11 +169,12 @@ const gallery = [
 
       <section class="big-band-cta" aria-labelledby="big-band-title">
         <div class="big-band-inner">
-          <div>
-            <p class="eyebrow">Need the full force?</p>
-            <h2 id="big-band-title">Find Ett Fett<br /><em>Storband.</em></h2>
+          <div class="big-band-visual">
+            <img src="/images/ettfett-01.jpg" alt="Ett Fett Storband performing live" loading="lazy" />
           </div>
           <div class="big-band-copy">
+            <p class="eyebrow">Need the full force?</p>
+            <h2 id="big-band-title">Find Ett Fett<br /><em>Storband.</em></h2>
             <p>Need the best Big Band? Find Ett Fett Storband for a bigger stage, a bigger sound, and a whole lot more brass.</p>
             <a class="text-link" href="https://ettfett.no" target="_blank" rel="noreferrer">Visit ettfett.no <span aria-hidden="true">↗</span></a>
           </div>
@@ -174,6 +183,7 @@ const gallery = [
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact-inner">
+          <img class="contact-brand" src="/images/affordablehorns-logo-black.png" alt="Affordable Horns black logo" />
           <p class="eyebrow">Have a gig in mind?</p>
           <h2 id="contact-title">Let’s<br /><em>make it loud.</em></h2>
           <p class="contact-copy">Tell us what you are working on, where you are playing, and what kind of horn sound you need. We will get back to you with a straightforward answer.</p>
